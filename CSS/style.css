@@ -55,6 +55,10 @@ nav a {
     border-radius: 15%;
 }
 
+nav a:hover {
+    background-color: var(--orange);
+}
+
 .training-option{
     margin-top: 15dvw;
     background-color: var(--orange);
@@ -77,13 +81,26 @@ nav a {
         align-items: center;
     }
 
+    @keyframes changeColor {
+        from { background-color: var(--orange);}
+        to { background-color: var(--blue-light);}
+    }
+
+    nav a {
+        font-size: 1.7rem;
+    }
+
     .training-option {
         margin-top: 5dvw;
+    }
+
+    .training-option:hover {
+        animation-name: changeColor;
+        animation-duration: 1.5s;
     }
     
     .training-option img{
         width: 200px;
         height: 200px;
-        
     }
 }
